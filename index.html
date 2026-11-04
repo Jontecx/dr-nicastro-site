@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Humberto Nicastro | Nutrição Esportiva, Performance e Saúde Metabólica</title>
+    <meta name="description" content="Nutricionista com Doutorado pela USP, Coordenador da CareClub e Consultor Científico. Consultas individuais em São Paulo (Ibirapuera e Itaim) e Online.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF9F6', // Off-white quente / linho suave
+                            bgCard: '#FFFFFF',
+                            forest: '#153E31', // Verde floresta profundo e nobre
+                            forestHover: '#0E2C23',
+                            forestLight: '#EAF3EF', // Verde sálvia muito suave
+                            sage: '#3B6B59',
+                            warmGray: '#F3EFEA', // Bege claro sofisticado
+                            textDark: '#192420',
+                            textMuted: '#586962',
+                            borderSubtle: '#E6ECE8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #FAF9F6;
+            color: #192420;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .card-clean {
+            background: #FFFFFF;
+            border: 1px solid #E9EFEA;
+            box-shadow: 0 4px 20px -4px rgba(21, 62, 49, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .card-clean:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px -6px rgba(21, 62, 49, 0.08);
+            border-color: #D2E2D8;
+        }
+
+        .pill-tag {
+            background-color: #EAF3EF;
+            color: #153E31;
+            border: 1px solid #D6E6DE;
+        }
+    </style>
+</head>
+<body class="selection:bg-brand-forestLight selection:text-brand-forest">
+
+    <!-- ================= NAVBAR MINIMALISTA (Estilo Floating Pill) ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto">
+            <nav class="bg-white/90 backdrop-blur-md rounded-full px-5 py-3 border border-brand-borderSubtle shadow-sm flex items-center justify-between">
+                
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-full bg-brand-forest text-white flex items-center justify-center font-serif text-sm font-bold">
+                        N
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-sm tracking-tight text-brand-textDark">DR. NICASTRO</span>
+                        <span class="hidden sm:inline-block text-[11px] text-brand-sage font-medium ml-1">• Nutrição & Fisiologia</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-7 text-xs font-semibold text-brand-textMuted uppercase tracking-wider">
+                    <a href="#sobre" class="hover:text-brand-forest transition-colors">Sobre</a>
+                    <a href="#diferenciais" class="hover:text-brand-forest transition-colors">A Consulta</a>
+                    <a href="#servicos" class="hover:text-brand-forest transition-colors">Serviços & Cursos</a>
+                    <a href="#atletas" class="hover:text-brand-forest transition-colors">Atletas</a>
+                    <a href="#faq" class="hover:text-brand-forest transition-colors">Dúvidas</a>
+                </div>
+
+                <!-- CTA Agendamento -->
+                <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-forestHover text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:scale-105">
+                    <span>Agendar Consulta</span>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-28 sm:pt-36">
+
+        <!-- ================= HERO SECTION (Clean, Acolhedor & Editorial) ================= -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left: Texts & CTA -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    
+                    <!-- Pill Tag -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full pill-tag text-xs font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                        <span>Doutorado pela USP • Coordenador CareClub</span>
+                    </div>
+
+                    <!-- Main Editorial Title -->
+                    <h1 class="font-serif font-bold text-3xl sm:text-5xl lg:text-5xl text-brand-textDark leading-[1.18] mb-6 tracking-tight">
+                        Cuidar da sua nutrição não é sobre restrição, é sobre <span class="italic text-brand-forest font-semibold">ciência e equilíbrio</span>.
+                    </h1>
+
+                    <!-- Clean Description -->
+                    <p class="text-brand-textMuted text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 font-normal">
+                        Com o <strong>Dr. Humberto Nicastro</strong>, você recebe uma abordagem clínica personalizada que respeita sua rotina, sua fisiologia e seus objetivos, sem modismos e com total rigor científico.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center gap-3.5 justify-center lg:justify-start">
+                        <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-brand-forest hover:bg-brand-forestHover text-white font-semibold text-sm px-7 py-3.5 rounded-full shadow-md shadow-brand-forest/15 transition-all duration-200">
+                            <span>Agendar Consulta</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+
+                        <a href="#servicos" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-brand-textDark border border-brand-borderSubtle font-medium text-sm px-6 py-3.5 rounded-full transition-all">
+                            <span>Ver Cursos & Mentorias</span>
+                        </a>
+                    </div>
+
+                    <!-- Simple Trust Line -->
+                    <div class="mt-8 pt-6 border-t border-brand-borderSubtle flex items-center justify-center lg:justify-start gap-6 text-xs text-brand-textMuted">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Atendimento Presencial em SP (Ibirapuera e Itaim)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Consulta Online</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Clean Doctor Photo Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Soft background shape -->
+                        <div class="absolute inset-0 bg-brand-warmGray rounded-3xl -rotate-2 scale-95 -z-10"></div>
+                        
+                        <div class="bg-white p-4 rounded-3xl border border-brand-borderSubtle shadow-sm text-center">
+                            <div class="rounded-2xl overflow-hidden mb-4 bg-brand-forestLight/40 aspect-[4/5] flex items-center justify-center">
+                                <img src="assets/dr_nicastro_clinico.jpg" alt="Dr. Humberto Nicastro" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="font-heading font-bold text-lg text-brand-textDark">Dr. Humberto Nicastro</h3>
+                            <p class="text-xs text-brand-sage font-medium mt-0.5">Nutricionista Esportivo & Clínico • CRN-3</p>
+                            <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-forestLight text-brand-forest text-[11px] font-semibold">
+                                <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                                <span>Doutor (PhD) pela USP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= MARQUEE / TRUST RIBBON ================= -->
+        <section class="border-y border-brand-borderSubtle bg-white py-4 mb-20">
+            <div class="max-w-5xl mx-auto px-4 flex flex-wrap items-center justify-around gap-6 text-xs font-semibold text-brand-textMuted uppercase tracking-wider text-center">
+                <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>
+                    Doutorado em Nutrição (USP)
+                </span>
+                <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>
+                    Coordenador de Nutrição CareClub
+                </span>
+                <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>
+                    Consultor Performance Science Nutrition
+                </span>
+                <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>
+                    Nutricionista de Medalhistas Olímpicos
+                </span>
+            </div>
+        </section>
+
+        <!-- ================= DIFERENCIAIS DA CONSULTA (Estilo Referência 2) ================= -->
+        <section id="diferenciais" class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Title & Pitch -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-sage">Metodologia Exclusiva</span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-brand-textDark mt-2 mb-5 leading-tight">
+                        Por que essa consulta é diferente de tudo que você já tentou?
+                    </h2>
+                    <p class="text-brand-textMuted text-sm sm:text-base leading-relaxed mb-8">
+                        Esqueça dietas engessadas ou suplementação genérica. Cada orientação é desenhada a partir do seu metabolismo real, exames laboratoriais e rotina de vida.
+                    </p>
+
+                    <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-forestHover text-white text-xs font-semibold px-6 py-3.5 rounded-full transition-all">
+                        <span>Falar com a Concierge no WhatsApp</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+
+                <!-- Right Clean Cards List -->
+                <div class="lg:col-span-7 space-y-4">
+                    
+                    <!-- Card 1 -->
+                    <div class="card-clean p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-forestLight text-brand-forest flex items-center justify-center shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-base text-brand-textDark mb-1">Atendimento Aprofundado (60 Minutos)</h3>
+                            <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                                Tempo dedicado para escutar sua história, rotina de treinos, histórico de exames, digestão e preferências alimentares.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card-clean p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-forestLight text-brand-forest flex items-center justify-center shrink-0">
+                            <i data-lucide="activity" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-base text-brand-textDark mb-1">Bioimpedância & Avaliação Corporal Precisa</h3>
+                            <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                                Análise detalhada de massa muscular, gordura corporal e hidratação celular para guiar metas realistas e sustentáveis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card-clean p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-forestLight text-brand-forest flex items-center justify-center shrink-0">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-base text-brand-textDark mb-1">Prescrição e Suplementação Baseada em Evidências</h3>
+                            <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                                Estratégia nutricional e suplementação com dosagens e horários exatos para performance, recuperação e saúde de longo prazo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card-clean p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-forestLight text-brand-forest flex items-center justify-center shrink-0">
+                            <i data-lucide="smartphone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-base text-brand-textDark mb-1">Acompanhamento e Suporte no App Webdiet</h3>
+                            <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                                Acesso ao seu plano na palma da mão e canal aberto com nutricionista assistente para tirar dúvidas e realizar ajustes.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SERVIÇOS, CURSOS & PRODUTOS (Estilo Referência 1 & 4) ================= -->
+        <section id="servicos" class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-sage">Opções de Atendimento & Ensino</span>
+                <h2 class="font-serif font-bold text-3xl sm:text-4xl text-brand-textDark mt-1">Serviços & Ecossistema</h2>
+                <p class="text-sm text-brand-textMuted mt-2">Escolha a modalidade que melhor se adapta aos seus objetivos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Consultas Clínicas -->
+                <div class="card-clean p-7 rounded-3xl flex flex-col justify-between border-2 border-brand-forest/20 relative">
+                    <span class="absolute -top-3 left-6 bg-brand-forest text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        Mais Procurado
+                    </span>
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-forestLight text-brand-forest flex items-center justify-center mb-5">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-textDark mb-2">Consulta Nutricional</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
+                            Atendimento individualizado presencial em São Paulo (Ibirapuera ou Itaim Bibi) ou no formato Online.
+                        </p>
+                        
+                        <ul class="space-y-2.5 text-xs text-brand-textDark mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>60 min de anamnese aprofundada</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Bioimpedância e antropometria</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Plano personalizado no app Webdiet</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Suporte com equipe assistente</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-brand-forest hover:bg-brand-forestHover text-white text-xs font-semibold py-3.5 rounded-xl transition-all">
+                        <span>Agendar com Concierge</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Curso de Suplementação (Hotmart) -->
+                <div class="card-clean p-7 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-5">
+                            <i data-lucide="book-open" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-textDark mb-2">Curso de Suplementação</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
+                            Curso online completo para nutricionistas e estudantes sobre metabolismo proteico e aminoácidos na prática clínica.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-brand-textDark mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Fisiologia do metabolismo proteico</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Evidências de creatina e aminoácidos</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Acesso na plataforma Hotmart</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Certificado oficial de conclusão</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://hotmart.com/pt-br/marketplace/produtos/nutricao-clinica-e-esportiva-metabolismo-e-estrategias-de-suplementacao/W95836528A?ref=U98652182U" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-brand-textDark border border-brand-borderSubtle text-xs font-semibold py-3.5 rounded-xl transition-all">
+                        <span>Acessar no Hotmart</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: CareClub Cursos & Fellowship -->
+                <div class="card-clean p-7 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-brand-forestLight text-brand-forest flex items-center justify-center mb-5">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-textDark mb-2">Fellowship CareClub</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
+                            Programa oficial de aperfeiçoamento profissional em nutrição esportiva e medicina do estilo de vida na CareClub.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-brand-textDark mb-8">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Prática clínica com casos reais</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Mentoria direta do Dr. Nicastro</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Networking de alta autoridade</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-brand-forest shrink-0"></i>
+                                <span>Imersão no ecossistema CareClub</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://careclub.com.br/cursos-fellowship-care-club-nutricao/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-brand-textDark border border-brand-borderSubtle text-xs font-semibold py-3.5 rounded-xl transition-all">
+                        <span>Ver Programa CareClub</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SOBRE O DR. NICASTRO ================= -->
+        <section id="sobre" class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="card-clean rounded-3xl p-8 sm:p-12 border border-brand-borderSubtle">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="w-full max-w-xs rounded-2xl overflow-hidden bg-brand-forestLight/50 aspect-square">
+                            <img src="assets/dr_nicastro_palestra.jpg" alt="Dr. Humberto Nicastro Palestrando" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-sage">Trajetória e Ciência</span>
+                        <h2 class="font-serif font-bold text-2xl sm:text-3xl text-brand-textDark mt-1 mb-4">
+                            Dr. Humberto Nicastro
+                        </h2>
+                        
+                        <div class="space-y-3.5 text-xs sm:text-sm text-brand-textMuted leading-relaxed">
+                            <p>
+                                Nutricionista graduado pelo Centro Universitário São Camilo e <strong>Doutor (PhD) em Ciências pela Universidade de São Paulo (USP)</strong>, com foco em fisiologia e metabolismo energético aplicados ao exercício.
+                            </p>
+                            <p>
+                                Atualmente é <strong>Coordenador do Departamento de Nutrição da CareClub</strong> (unidades São Paulo), além de <strong>Consultor Científico da Performance Science Nutrition</strong> e professor de cursos de pós-graduação por todo o país.
+                            </p>
+                            <p>
+                                Especialista em Nutrição de Precisão (Genômica Nutricional) e Fisiologia do Exercício, sua conduta clínica une a mais avançada literatura científica internacional ao acolhimento e compreensão da realidade do paciente.
+                            </p>
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-brand-forest">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-forestLight">
+                                <i data-lucide="check-circle" class="w-4 h-4"></i> Doutorado pela USP
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-forestLight">
+                                <i data-lucide="check-circle" class="w-4 h-4"></i> +15 Anos de Consultório
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-forestLight">
+                                <i data-lucide="check-circle" class="w-4 h-4"></i> Pesquisa & Ensino
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROVA SOCIAL / ATLETAS & MARATONAS ================= -->
+        <section id="atletas" class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-sage">Resultados Comprovados</span>
+                <h2 class="font-serif font-bold text-3xl text-brand-textDark mt-1">Alta Performance na Prática</h2>
+                <p class="text-xs sm:text-sm text-brand-textMuted mt-1">Condução nutricional de quem compete no mais alto nível esportivo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Card 1: Atletas Olímpicos -->
+                <div class="card-clean rounded-2xl p-5 flex items-center gap-5">
+                    <div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/post_atletas_olimpicos.jpg" alt="Atletas Olímpicos Thiago Pereira e Felipe França" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Medalhas & Recordes</span>
+                        <h4 class="font-heading font-bold text-base text-brand-textDark mt-0.5">Thiago Pereira & Felipe França</h4>
+                        <p class="text-xs text-brand-textMuted mt-1 leading-relaxed">
+                            Atendimento a medalhistas olímpicos e campeões mundiais de natação, aplicando o máximo rigor metabólico.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Maratona -->
+                <div class="card-clean rounded-2xl p-5 flex items-center gap-5">
+                    <div class="w-24 h-28 rounded-xl overflow-hidden shrink-0 bg-slate-100">
+                        <img src="assets/post_maratona.jpg" alt="Maratona Montevideo 21km" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Vivência no Esporte</span>
+                        <h4 class="font-heading font-bold text-base text-brand-textDark mt-0.5">Nutricionista & Praticante</h4>
+                        <p class="text-xs text-brand-textMuted mt-1 leading-relaxed">
+                            Maratonista e praticante de endurance (21km Montevideo), testando e vivenciando a suplementação na pele.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= YOUTUBE AULAS GRATUITAS ================= -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="bg-brand-warmGray rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-700">Canal YouTube</span>
+                    <h3 class="font-serif font-bold text-2xl text-brand-textDark mt-1 mb-2">Webinars & Conteúdo Científico Aberto</h3>
+                    <p class="text-xs sm:text-sm text-brand-textMuted max-w-lg">
+                        Aulas completas e aprofundadas com o Dr. Nicastro no canal da Performance Science Nutrition sobre modulação de saciedade e carboidratos.
+                    </p>
+                </div>
+                <a href="https://www.youtube.com/@PerformancenutritionBrasil" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-6 py-3.5 rounded-full transition-all shrink-0">
+                    <i data-lucide="play" class="w-4 h-4 fill-white"></i>
+                    <span>Assistir no YouTube</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section id="faq" class="max-w-3xl mx-auto px-4 sm:px-6 pb-24">
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-sage">Dúvidas Frequentes</span>
+                <h2 class="font-serif font-bold text-3xl text-brand-textDark mt-1">Perguntas Comuns</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="card-clean rounded-2xl p-5 group cursor-pointer">
+                    <summary class="font-heading font-semibold text-sm sm:text-base text-brand-textDark flex items-center justify-between list-none">
+                        <span>Como é o formato da primeira consulta?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sage group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-brand-textMuted mt-3 pt-3 border-t border-brand-borderSubtle leading-relaxed">
+                        A primeira consulta dura cerca de 60 minutos, com anamnese aprofundada, análise de rotina e exames, além de avaliação física completa (bioimpedância e medidas) no presencial.
+                    </p>
+                </details>
+
+                <details class="card-clean rounded-2xl p-5 group cursor-pointer">
+                    <summary class="font-heading font-semibold text-sm sm:text-base text-brand-textDark flex items-center justify-between list-none">
+                        <span>Como funciona a consulta online?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sage group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-brand-textMuted mt-3 pt-3 border-t border-brand-borderSubtle leading-relaxed">
+                        A consulta online é realizada por videoconferência com o mesmo tempo e rigor técnico. O plano alimentar e suplementação são entregues diretamente no aplicativo Webdiet.
+                    </p>
+                </details>
+
+                <details class="card-clean rounded-2xl p-5 group cursor-pointer">
+                    <summary class="font-heading font-semibold text-sm sm:text-base text-brand-textDark flex items-center justify-between list-none">
+                        <span>O Dr. Nicastro atende convênios?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sage group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-brand-textMuted mt-3 pt-3 border-t border-brand-borderSubtle leading-relaxed">
+                        Os atendimentos são particulares. Emitimos nota fiscal detalhada para que você possa solicitar o reembolso junto ao seu convênio de saúde.
+                    </p>
+                </details>
+
+                <details class="card-clean rounded-2xl p-5 group cursor-pointer">
+                    <summary class="font-heading font-semibold text-sm sm:text-base text-brand-textDark flex items-center justify-between list-none">
+                        <span>Onde ficam os consultórios em São Paulo?</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-brand-sage group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs sm:text-sm text-brand-textMuted mt-3 pt-3 border-t border-brand-borderSubtle leading-relaxed">
+                        O Dr. Nicastro atende nas unidades da CareClub no <strong>Ibirapuera</strong> e no <strong>Itaim Bibi</strong>, centros de excelência médica na capital paulista.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ================= CTA FINAL ================= -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 pb-28 text-center">
+            <div class="bg-brand-forest text-white rounded-3xl p-8 sm:p-12 shadow-xl">
+                <span class="text-xs font-semibold uppercase tracking-wider text-emerald-300">Comece Sua Transformação</span>
+                <h2 class="font-serif font-bold text-2xl sm:text-4xl mt-2 mb-4">
+                    Agende sua consulta com quem é referência em nutrição no país.
+                </h2>
+                <p class="text-slate-200 text-xs sm:text-sm max-w-lg mx-auto mb-8 leading-relaxed">
+                    Entre em contato com nossa concierge para verificar os horários disponíveis em São Paulo ou para atendimento Online.
+                </p>
+
+                <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2.5 bg-white hover:bg-slate-100 text-brand-forest font-bold text-sm px-8 py-4 rounded-full transition-all shadow-md">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-brand-forest"></i>
+                    <span>Falar no WhatsApp (Concierge Ana)</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-brand-borderSubtle bg-white py-10 pb-24 sm:pb-10 text-xs text-brand-textMuted">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+                <p class="font-heading font-bold text-brand-textDark text-sm">Dr. Humberto Nicastro</p>
+                <p class="text-[11px] text-brand-textMuted mt-0.5">Doutor em Nutrição (USP) • Coordenador CareClub • CRN-3</p>
+            </div>
+
+            <!-- Socials -->
+            <div class="flex items-center gap-3">
+                <a href="https://instagram.com/nicastroh" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-brand-textDark hover:bg-brand-forest hover:text-white transition-all">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                </a>
+                <a href="https://www.youtube.com/@PerformancenutritionBrasil" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-brand-textDark hover:bg-red-600 hover:text-white transition-all">
+                    <i data-lucide="youtube" class="w-4 h-4"></i>
+                </a>
+                <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-brand-textDark hover:bg-emerald-600 hover:text-white transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <p class="text-[11px] text-brand-textMuted">© 2026 Dr. Humberto Nicastro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ================= FLOATING MOBILE BAR ================= -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-md border-t border-brand-borderSubtle sm:hidden shadow-lg">
+        <a href="https://wa.me/5511965818958?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20agendamento%20de%20consulta%20com%20o%20Dr.%20Nicastro" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="w-full flex items-center justify-center gap-2 bg-brand-forest text-white font-bold text-xs py-3.5 px-4 rounded-full shadow-md active:scale-95 transition-transform">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+            <span>Agendar Consulta no WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
