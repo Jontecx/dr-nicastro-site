@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/concierge",
+      "destination": "https://wa.me/5511965818958?text=Ola%2C%20li%20o%20guia%20pos-ceia%20do%20Dr%20Nicastro%20e%20gostaria%20de%20conversar",
+      "permanent": false
+    }
+  ]
+}

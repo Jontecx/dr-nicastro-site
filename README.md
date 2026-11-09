@@ -25,3 +25,4 @@ dr-nicastro-site/
 3. Importe o repositório `Jontecx/dr-nicastro-site`.
 4. Mantenha as configurações padrão (Framework Preset: **Other**) e clique em **Deploy**.
 5. O site estará online imediatamente com certificado SSL gratuito e alta velocidade de entrega (Edge Network).
+
