@@ -174,7 +174,7 @@
                         
                         <div class="bg-white p-4 rounded-3xl border border-brand-borderSubtle shadow-sm text-center">
                             <div class="rounded-2xl overflow-hidden mb-4 bg-brand-forestLight/40 aspect-[4/5] flex items-center justify-center">
-                                <img src="assets/dr_nicastro_clinico.jpg" alt="Dr. Humberto Nicastro" class="w-full h-full object-cover">
+                                <img src="assets/dr_nicastro_perfil_azul.jpg" alt="Dr. Humberto Nicastro" class="w-full h-full object-cover object-top">
                             </div>
                             <h3 class="font-heading font-bold text-lg text-brand-textDark">Dr. Humberto Nicastro</h3>
                             <p class="text-xs text-brand-sage font-medium mt-0.5">Nutricionista Esportivo & Clínico • CRN-3</p>
@@ -436,8 +436,19 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                     
                     <div class="lg:col-span-5 flex justify-center">
-                        <div class="w-full max-w-xs rounded-2xl overflow-hidden bg-brand-forestLight/50 aspect-square">
-                            <img src="assets/dr_nicastro_palestra.jpg" alt="Dr. Humberto Nicastro Palestrando" class="w-full h-full object-cover">
+                        <div class="relative w-full max-w-xs">
+                            <div class="rounded-2xl overflow-hidden shadow-sm border border-brand-borderSubtle bg-brand-forestLight/50 aspect-[4/5]">
+                                <img src="assets/dr_nicastro_palco_microfone.jpg" alt="Dr. Humberto Nicastro Palestrando no Palco" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-white p-2 rounded-2xl border border-brand-borderSubtle shadow-md hidden sm:flex items-center gap-2.5">
+                                <div class="w-12 h-14 rounded-xl overflow-hidden shrink-0">
+                                    <img src="assets/dr_nicastro_palestra_gesto.jpg" alt="Dr. Humberto Nicastro em Aula" class="w-full h-full object-cover object-top">
+                                </div>
+                                <div class="pr-2">
+                                    <span class="block text-[10px] font-bold uppercase text-brand-forest">Docência & Palestras</span>
+                                    <span class="block text-[11px] text-brand-textMuted font-medium">+100 aulas e eventos</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -517,21 +528,39 @@
 
         <!-- ================= YOUTUBE AULAS GRATUITAS ================= -->
         <section class="max-w-5xl mx-auto px-4 sm:px-6 pb-24">
-            <div class="bg-brand-warmGray rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-wider text-red-700">Canal YouTube</span>
-                    <h3 class="font-serif font-bold text-2xl text-brand-textDark mt-1 mb-2">Webinars & Conteúdo Científico Aberto</h3>
-                    <p class="text-xs sm:text-sm text-brand-textMuted max-w-lg">
-                        Aulas completas e aprofundadas com o Dr. Nicastro no canal da Performance Science Nutrition sobre modulação de saciedade e carboidratos.
+            <div class="bg-brand-warmGray rounded-3xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border border-brand-borderSubtle">
+                <div class="md:col-span-7 space-y-3">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-700 flex items-center gap-1.5">
+                        <i data-lucide="youtube" class="w-4 h-4"></i>
+                        <span>Webinars, Podcasts & Conteúdo Científico</span>
+                    </span>
+                    <h3 class="font-serif font-bold text-2xl sm:text-3xl text-brand-textDark mt-1 mb-2">Aulas e Discussões Metabólicas na Prática</h3>
+                    <p class="text-xs sm:text-sm text-brand-textMuted leading-relaxed max-w-lg">
+                        Aulas completas, participações em podcasts e debates técnicos com o Dr. Nicastro abordando modulação de saciedade, carboidratos no esporte e suplementação baseada em evidências.
                     </p>
+                    <div class="pt-2">
+                        <a href="https://www.youtube.com/@PerformancenutritionBrasil" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-6 py-3.5 rounded-full transition-all shadow-sm">
+                            <i data-lucide="play" class="w-4 h-4 fill-white"></i>
+                            <span>Assistir Aulas no YouTube</span>
+                        </a>
+                    </div>
                 </div>
-                <a href="https://www.youtube.com/@PerformancenutritionBrasil" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-6 py-3.5 rounded-full transition-all shrink-0">
-                    <i data-lucide="play" class="w-4 h-4 fill-white"></i>
-                    <span>Assistir no YouTube</span>
-                </a>
+                <div class="md:col-span-5 flex justify-center">
+                    <a href="https://www.youtube.com/@PerformancenutritionBrasil" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="relative w-full rounded-2xl overflow-hidden aspect-video shadow-md border border-white group block">
+                        <img src="assets/dr_nicastro_estudio_podcast.jpg" alt="Dr. Humberto Nicastro em Estúdio / Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <i data-lucide="play" class="w-5 h-5 fill-white ml-0.5"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
